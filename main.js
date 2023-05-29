@@ -20,7 +20,9 @@ save.addEventListener("click", () => {
 });
 
 remove.addEventListener("click", () => {
-    text.value = "";
-    localStorage.removeItem();
-}
+    if (confirm('本当に削除しますか？') === true) {        
+        text.value = "";
+        localStorage.removeItem();
+    }
+    }
 )
